@@ -3,6 +3,6 @@ import './Button.css'
 
 export default function Button(props) {
   return (
-    <div {...props} className={'button' + props.className }/>
+    <button {...props} className={'button' + props.className }/>
   )
 }
