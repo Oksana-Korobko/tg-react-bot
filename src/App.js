@@ -1,9 +1,12 @@
 import { useEffect } from 'react';
 import './App.css';
+import { useTelegram } from './hooks/useTelegram';
+
 
 
 
 function App() {
+  const {onToggleButton, tg} = useTelegram();
   useEffect( () => {
     tg.ready(); // приложение проинициализировалось и его можно отрисовывать
   }, [])
@@ -12,8 +15,7 @@ function App() {
   }
   return (
     <div className="App">
-      Work
-      
+       <button onClick = {onToggleButton}>toggle</button>
     </div>
   );
 }
