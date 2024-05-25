@@ -10,12 +10,11 @@ export default function Form() {
   const {tg} = useTelegram();
 
   useEffect(() => {
-    tg.MainButton.setParams(
-      {
-        text:"Надіслати дані"
-      }
-    )
+    tg.MainButton.setParams({
+        text: 'Отправить данные'
+    })
   }, [])
+
   useEffect(() => {
     if(!country||!street){
       tg.MainButton.hide()
