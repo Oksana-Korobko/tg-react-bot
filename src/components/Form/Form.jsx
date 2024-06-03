@@ -38,6 +38,7 @@ export default function Form() {
 
 
   return (
+    
     <div className={'form'}>
       <h3> Вкажіть ваші дані</h3>
       <input 
