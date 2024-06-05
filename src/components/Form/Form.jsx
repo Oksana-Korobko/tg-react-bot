@@ -40,7 +40,8 @@ export default function Form() {
   return (
     
     <div className={'form'}>
-      <h3> Вкажіть ваші дані</h3>
+      Forma
+      {/* <h3> Вкажіть ваші дані</h3>
       <input 
         className = {'input'} 
         type='text' 
@@ -58,7 +59,7 @@ export default function Form() {
       <select value={subject} onChange={onChangeSubject} className={'select'}>
         <option value={'physical'}>Фіз. особа</option>
         <option value={'legal'}>Юр. особа</option>
-      </select>
+      </select> */}
         
     </div>
   )

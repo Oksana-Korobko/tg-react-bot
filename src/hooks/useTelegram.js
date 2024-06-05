@@ -13,7 +13,7 @@ export function useTelegram(){
             tg.MainButton.show()
         }
     }
-    console.log(tg.initDataUnsafe?.user)
+    
     return{
         onClose,
         onToggleButton,
