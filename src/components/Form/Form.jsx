@@ -15,13 +15,13 @@ export default function Form() {
     })
   }, [])
 
-  useEffect(() => {
-    if(!country||!street){
-      tg.MainButton.hide()
-    } else {
-      tg.MainButton.show()
-    }
-  }, [country, street])
+  // useEffect(() => {
+  //   if(!country||!street){
+  //     tg.MainButton.hide()
+  //   } else {
+  //     tg.MainButton.show()
+  //   }
+  // }, [country, street])
 
 
   const onChangeCountry = (e) => {
