@@ -8,20 +8,19 @@ import Form from './components/Form/Form';
 
 function App() {
   const {onToggleButton, tg} = useTelegram();
-  useEffect( () => {
-    tg.ready(); // приложение проинициализировалось и его можно отрисовывать
+
+  useEffect(() => {
+      tg.ready();
   }, [])
-  
- 
+
   return (
-    <div className="App">
-      <Header />
-      <Routes>
-        <Route index element = {<ProductList />}/>
-        <Route path = {'form'} element = {<Form />}/>
-      </Routes>
-      
-    </div>
+      <div className="App">
+          <Header />
+          <Routes>
+              <Route index element={<ProductList />}/>
+              <Route path={'form'} element={<Form />}/>
+          </Routes>
+      </div>
   );
 }
 
