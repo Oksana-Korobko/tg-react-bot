@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import './App.css';
-import { useTelegram } from './hooks/useTelegram';
+import {useTelegram} from './hooks/useTelegram';
 import Header from './components/Header/Header';
 import {Route, Routes} from 'react-router-dom'
 import ProductList from './components/ProductList/ProductList';
