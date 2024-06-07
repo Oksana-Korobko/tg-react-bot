@@ -4,19 +4,19 @@ import {useTelegram} from '../../hooks/useTelegram'
 
 export default function Form() {
 
-  const [country, setCountry] = useState('');
+  const [city, setCity] = useState('');
     const [street, setStreet] = useState('');
     const [subject, setSubject] = useState('physical');
     const {tg} = useTelegram();
 
     const onSendData = useCallback(() => {
         const data = {
-            country,
+            city,
             street,
             subject
         }
         tg.sendData(JSON.stringify(data));
-    }, [country, street, subject])
+    }, [city, street, subject])
 
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData)
@@ -27,20 +27,20 @@ export default function Form() {
 
     useEffect(() => {
         tg.MainButton.setParams({
-            text: 'Отправить данные'
+            text: 'Надіслати дані'
         })
     }, [])
 
     useEffect(() => {
-        if(!street || !country) {
+        if(!street || !city) {
             tg.MainButton.hide();
         } else {
             tg.MainButton.show();
         }
-    }, [country, street])
+    }, [city, street])
 
-    const onChangeCountry = (e) => {
-        setCountry(e.target.value)
+    const onChangeCity = (e) => {
+        setCity(e.target.value)
     }
 
     const onChangeStreet = (e) => {
@@ -53,18 +53,18 @@ export default function Form() {
 
     return (
         <div className={"form"}>
-            <h3>Введите ваши данные</h3>
+            <h3>Введіть Ваші дані</h3>
             <input
                 className={'input'}
                 type="text"
-                placeholder={'Страна'}
-                value={country}
-                onChange={onChangeCountry}
+                placeholder={'Місто'}
+                value={city}
+                onChange={onChangeCity}
             />
             <input
                 className={'input'}
                 type="text"
-                placeholder={'Улица'}
+                placeholder={'Вулиця'}
                 value={street}
                 onChange={onChangeStreet}
             />
