@@ -56,7 +56,7 @@ const getTotalPrice = (items = []) => {
 
 export default function ProductList() {
   const {addedItems, setAddedItems} = useState([]);
-  // const {tg, queryId} = useTelegram();
+  const {tg} = useTelegram();
 
   // const onSendData = useCallback(() => {
   //   const data = {
