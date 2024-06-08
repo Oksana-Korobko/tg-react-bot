@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import './ProductList.css';
 // import products from '../../flowers.json'
 import ProductItem from '../ProductItem/ProductItem'
-import useTelegram from '../../hooks/useTelegram'
+import {useTelegram} from '../../hooks/useTelegram';
 
 const products = [
   {
